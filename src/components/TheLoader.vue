@@ -1,10 +1,21 @@
+<script setup>
+defineProps({
+  color: {
+    type: String,
+    default: 'white'
+  }
+})
+</script>
+
 <template>
-  <div class="hloader"></div>
+  <div
+    :style="`--hloader-color: ${color}`"
+    class="hloader"></div>
 </template>
 
 <style scoped>
 .hloader {
-  --hloader-color: white;
+  /* --hloader-color: white; */
   --hloader-size: 16px;
   --hloader-weight: 3px;
   --hloader-duration: 1s;
