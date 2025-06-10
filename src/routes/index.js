@@ -21,14 +21,16 @@ const router = createRouter({
       component: MoviesPage,
       meta: {
         requiresAuth: true
-      }
-    },
-    {
-      path: '/movies/:movieId', // http://localhost:5173/movies/tt1234567
-      component: MovieDetailsPage,
-      meta: {
-        requiresAuth: true
-      }
+      },
+      children: [
+        {
+          path: '/movies/:movieId', // http://localhost:5173/movies/tt1234567
+          component: MovieDetailsPage,
+          meta: {
+            requiresAuth: true
+          }
+        }
+      ]
     },
     {
       path: '/signin',
