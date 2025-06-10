@@ -1,7 +1,17 @@
 <script setup>
 import TheLoader from '@/components/TheLoader.vue'
 
-defineProps(['color', 'loading'])
+// defineProps(['color', 'loading']
+defineProps({
+  color: {
+    type: String,
+    default: 'secondary'
+  },
+  loading: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <template>
